@@ -209,13 +209,12 @@ button.main-button:hover {
 
   text-align: center;
   font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 69px;
   margin-bottom: 30px;
   letter-spacing: -0.01em;
-
-  color: #494949;
+  color: black;
 }
 
 
@@ -239,15 +238,16 @@ header
 
 .background-header .logo,
 .background-header .main-nav .nav li a {
-  color: #676767!important;
+  color: black!important;
 }
 
 .background-header .main-nav .nav li:hover a {
   color: #FFA300!important;
+  text-decoration: underline;
 }
 
 .background-header .nav li a.active {
-  color: #FFA300!important;
+  color: black!important;
 }
 
 .header-area {
@@ -294,19 +294,26 @@ header
 }
 
 .header-area .main-nav .nav li {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
-.header-area .main-nav .nav li:last-child {
-  padding-right: 0px;
+.header-area .main-nav .nav li:last-child a {
+  background: #FFA300;
+  border-radius: 12px;
+  color: white;
+  /*padding: 15px 25px;*/
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 14px;
 }
 
 .header-area .main-nav .nav li a {
   display: block;
   font-weight: 500;
-  font-size: 13px;
-  color: #676767;
+  font-size: 14px;
+  color: black;
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -320,6 +327,7 @@ header
 
 .header-area .main-nav .nav li:hover a {
   color: #FFA300;
+  text-decoration: underline;
 }
 
 .header-area .main-nav .nav li.submenu {
@@ -658,24 +666,24 @@ welcome
 
 .welcome-area .header-text h1 {
   font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 69px;
   margin-bottom: 30px;
   letter-spacing: -0.01em;
 
-  color: #494949;
+  color: #fba70b;
 }
 
-.welcome-area .header-text h1 em {
-  font-style: normal;
+.welcome-area .header-text p em {
+  font-weight: bold;
   color: #fba70b;
 }
 
 .welcome-area .header-text p {
   font-weight: 300;
-  font-size: 17px;
-  color: #7a7a7a;
+  font-size: 18px;
+  color: black;
   line-height: 30px;
   letter-spacing: 0.25px;
   margin-bottom: 40px;
@@ -831,17 +839,17 @@ about
 }
 
 #aboutUs .features-item h4 {
-  font-size: 26px;
-  color: #676767;
+  font-size: 24px;
+  color: black;
   font-weight: bold;
   margin-top: 20px;
 }
 
 #aboutUs .features-item p {
   margin-top: 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 25px;
-  color: #888;
+  color: black;
 }
 
 #aboutUs .features-item .main-button {
@@ -881,9 +889,9 @@ about
 }
 
 #about .features-item p {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 25px;
-  color: #888;
+  color: black;
 }
 
 #about .features-item .main-button {
@@ -932,13 +940,14 @@ promotion
 
 #promotion .right-text h1 {
   font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 69px;
   margin-bottom: 30px;
   letter-spacing: -0.01em;
 
-  color: #494949;
+  color: black;
+
 }
 
 #promotion .right-text h1 em {
@@ -948,8 +957,8 @@ promotion
 
 #promotion .right-text p {
   font-weight: 300;
-  font-size: 17px;
-  color: #7a7a7a;
+  font-size: 18px;
+  color: black;
   line-height: 30px;
   letter-spacing: 0.25px;
   margin-bottom: 40px;
@@ -982,13 +991,13 @@ promotion
 
 .heading h1 {
   font-style: normal;
-  font-weight: 900;
-  font-size: 36px;
+  font-weight: 600;
+  font-size: 32px;
   line-height: 69px;
   margin-bottom: 30px;
   letter-spacing: -0.01em;
 
-  color: #494949;
+  color: black;
 }
 
 .heading h1 em {
@@ -1001,15 +1010,15 @@ promotion
   position: relative;
   z-index: 10;
   padding: 45px;
-  border-radius: 24px;
+  border-radius: 12px;
   background: #C6E8B1;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
 }
 
 .contact-form input,
 .contact-form textarea {
-  color: #777;
-  font-size: 13px;
+  color: black;
+  font-size: 14px;
   border: 1px solid #eee;
   background-color: #f7f7f7;
   border-radius: 5px;
@@ -1114,12 +1123,13 @@ testimonials
 }
 
 #testimonials .teams-icon h3{
-  font-size: 18px;
+  margin-top: 16px;
+  font-size: 16px;
 }
 
 #testimonials .teams-icon p{
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 5px;
+  font-size: 14px;
 }
 
 #testimonials .intro {
@@ -1129,7 +1139,7 @@ testimonials
 #testimonials .intro h1{
   font-size: 18px;
   letter-spacing: -0.01em;
-  color: #494949;
+  color: black;
 }
 
 #testimonials .intro h2{
@@ -1140,10 +1150,10 @@ testimonials
 
 #testimonials .team-icon p{
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   letter-spacing: -0.01em;
-  color: #676767;
+  color: black;
 }
 
 
