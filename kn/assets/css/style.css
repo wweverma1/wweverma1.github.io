@@ -1251,17 +1251,25 @@ footer {
 }
 
 footer h1{
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 69px;
-  margin-bottom: 30px;
-  letter-spacing: -0.01em;
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 20px;
   color: white;
 }
 
+footer .social
+{
+  padding-left: 10px;
+  padding-right: 10px;
+} 
+
 footer .social .social-handles{
   margin-top: 20px;
+}
+
+footer .sitemap{
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 footer .sitemap .head{
@@ -1320,7 +1328,6 @@ footer .footer-content {
 
 footer .social {
   overflow: hidden;
-  margin-top: 30px;
 }
 
 footer .social li:first-child {
@@ -1352,6 +1359,10 @@ footer .social-handles  a:hover {
   color: #76A758;
 }
 
+footer .address{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 footer .address p{
   color: #FFF;
