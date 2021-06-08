@@ -575,6 +575,7 @@ header
   }
   .header-area .main-nav {
     overflow: hidden;
+    background-color: white;
   }
   .header-area .main-nav .nav {
     float: none;
@@ -593,22 +594,19 @@ header
   .header-area .main-nav .nav li {
     width: 100%;
     background: #fff;
-    border-bottom: 1px solid #eee;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
   .header-area .main-nav .nav li a {
     font-size: 14px;
     height: 50px !important;
     line-height: 50px !important;
     padding: 0px !important;
     border: none !important;
-    color: #191a20 !important;
+    margin-bottom: 5px;
   }
-  .header-area .main-nav .nav li a:hover {
-    background: #eee !important;
-    color: #FFA300!important;
-  }
+
   .header-area .main-nav .nav li.submenu ul {
     position: relative;
     visibility: inherit;
