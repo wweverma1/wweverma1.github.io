@@ -293,7 +293,6 @@ header
   background: #FFA300;
   border-radius: 12px;
   color: white;
-  padding-left: 12px;
   text-decoration: none;
   padding-left: 5px;
   padding-right: 5px;
@@ -313,7 +312,7 @@ header
 
 .header-area .main-nav .nav li a {
   color: inherit;
-  display: block;
+  display: inline-block;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
