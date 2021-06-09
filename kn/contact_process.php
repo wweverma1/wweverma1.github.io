@@ -58,7 +58,7 @@
             problem($error_message);
         }
 
-        $email_message = "New Enquiry Form details:<br>";
+        $email_message = "New Enquiry Form details:<br><br>";
 
         function clean_string($string)
         {
@@ -66,10 +66,10 @@
             return str_replace($bad, "", $string);
         }
 
-        $email_message .= "Name: <b>" . clean_string($name) . "</b><br>";
-        $email_message .= "Contact Number: <b>" . clean_string($number) . "</b><br>";
-        $email_message .= "Email: <b>" . clean_string($email) . "</b><br>";
-        $email_message .= "Message: " . clean_string($message) . ".<br><br>";
+        $email_message .= "&emsp;Name: <b>" . clean_string($name) . "</b><br>";
+        $email_message .= "&emsp;Contact Number: <b>" . clean_string($number) . "</b><br>";
+        $email_message .= "&emsp;Email: <b>" . clean_string($email) . "</b><br>";
+        $email_message .= "&emsp;Message: " . clean_string($message) . ".<br><br>";
         $email_message .= "Thanks & Regards<br><br><b>Krishi Network</b>";
 
                 $mail = new PHPMailer;
