@@ -1,11 +1,14 @@
 <?php    
+
+    ini_set('display_errors', 1);
     include('phpMailer/mailer_config.php');
+    
+    require $_SERVER['DOCUMENT_ROOT'] . '/kn/phpMailer/Exception.php';
+    require $_SERVER['DOCUMENT_ROOT'] . '/kn/phpMailer/PHPMailer.php';
+    require $_SERVER['DOCUMENT_ROOT'] . '/kn/phpMailer/SMTP.php';
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    require $_SERVER['DOCUMENT_ROOT'] . '/phpMailer/Exception.php';
-    require $_SERVER['DOCUMENT_ROOT'] . '/phpMailer/PHPMailer.php';
-    require $_SERVER['DOCUMENT_ROOT'] . '/phpMailer/SMTP.php';
-
 
     if (isset($_POST['form-submit'])) 
     {

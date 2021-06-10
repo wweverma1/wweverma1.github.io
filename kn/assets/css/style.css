@@ -202,7 +202,7 @@ button.main-button:hover {
 
 
 .center-heading {
-  margin-bottom: 70px;
+  margin-bottom: 20px;
 }
 
 .center-heading h1 {
@@ -212,7 +212,6 @@ button.main-button:hover {
   font-weight: 600;
   font-size: 32px;
   line-height: 69px;
-  margin-bottom: 30px;
   letter-spacing: -0.01em;
   color: black;
 }
@@ -655,15 +654,15 @@ welcome
 .welcome-area {
   width: 100%;
   min-height: 793px;
-  background-image: url(../images/bg_1.png);
+  background-image: url(../images/bg_2.png);
   background-repeat: no-repeat;
-  background-position: 90% 50%;
+  background-position: 90% 35%;
 }
 
 .welcome-area .header-text .left-text {
   position: relative;
   align-self: center;
-  margin-top: 30%;
+  margin-top: 25%;
   transform: perspective(1px) translateY(-30%) !important;
 }
 
@@ -720,6 +719,8 @@ welcome
 }
 
 @media (max-width: 1140px) {
+
+
   .welcome-area {
     height: auto;
   }
@@ -759,6 +760,11 @@ welcome
     display:block;
     margin-bottom: 40px;
   }
+
+
+  .promo-button{
+    text-align: center;
+  }
 }
 
 /*
@@ -768,7 +774,7 @@ about
 */
 
 #about {
-  padding: 10px 0px;
+  top: -180px;
   position: relative;
   z-index: 9;
 }
@@ -872,7 +878,6 @@ about
   margin-top: 20px;
   font-size: 24px;
   color: black;
-  font-weight: bold;
   margin-top: 20px;
 }
 
@@ -997,7 +1002,7 @@ promotion
 }
 
 #promotion {
-  padding: 100px 10px;
+  padding: 50px 10px;
 }
 
 #promotion .left-image img{
@@ -1042,7 +1047,7 @@ promotion
 /*contact*/
 
 #contact .container{
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .heading h1 {
@@ -1164,7 +1169,7 @@ testimonials
 }
 
 #testimonials {
-  padding-top: 100px;
+  padding-top: 150px;
   position: relative;
   z-index: 9;
   margin-bottom: 100px;
