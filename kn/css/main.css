@@ -42,6 +42,10 @@
   color: #777777;
   font-weight: 300; }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: #777777;
   font-family: "Roboto", sans-serif;
@@ -677,6 +681,8 @@ td, th {
 
 @media (max-width: 991px) {
   .download-button {
+    text-align: center;
+    display: block;
     -webkit-box-direction: normal !important;
     -webkit-box-orient: vertical !important;
     -webkit-flex-direction: column !important;
@@ -684,10 +690,11 @@ td, th {
     -ms-flex-direction: column !important;
     flex-direction: column !important; } }
 .buttons {
-  padding: 20px 24px 8px;
-  max-width: 225px;
-  margin-right: 10px;
+  display: inline-block;
+  padding: 10px 25px 10px;
+  max-width: 150px;
   border: 1px solid #FFA300;
+  border-radius: 10px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -695,6 +702,14 @@ td, th {
   background-color: #fff;
   color: #000 !important; }
 
+  .button {
+    margin-left: 20px;
+    display: inline-block;
+  }
+
+  .button img {
+    width: 150px;
+  }
   .buttons i {
     font-size: 44px;
     padding-right: 20px;
@@ -709,7 +724,9 @@ td, th {
     .buttons:hover p span {
       color: #fff; }
   .buttons a {
-    color: #000; }
+    color: #FFA300; }
+  .buttons a:hover {
+    color: white; }
   .buttons p {
     margin-bottom: 8px !important;
     font-size: 14px;
@@ -1769,7 +1786,12 @@ h1, h2, h3, h4, h5, h6 {
   background: #fff; }
 
 .nav-menu ul li {
-  transition: 0.3s; }
+  transition: 0.3s;
+  border-bottom: 2px solid white; }
+
+  .nav-menu .menu-active {
+    border-bottom: 4px solid #FFA300; }
+
   .nav-menu ul li > a {
     padding: 10px;
     color: #676767;
@@ -1968,7 +1990,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .home-banner-content p {
   font-size: 18px;
   color:#8E8E8E;
-  margin-bottom: 15px; }
+  margin-bottom: 30px; }
 
 
   .milestone-area {
@@ -2056,6 +2078,43 @@ body.mobile-nav-active #mobile-nav-toggle {
       }
     }
 
+    .about-area .home-about-right2 .left-mark {
+      position: relative;
+    }
+
+    .about-area .home-about-right2 .right-mark {
+      position: relative;
+    }
+
+
+.about-area .vision {
+  background-image: url(../img/vision.png);
+  background-repeat: no-repeat;
+  content: "";
+  padding: 20px 73px;
+  text-align: left;
+}
+
+.about-area .home-about-right2 .left-mark:before {
+  font-family: sans-serif;
+  content: "\201C";
+  font-size: 50px;
+  color:#B5B5B5;
+  left: -4%;
+  top: 0%;
+  position: absolute;
+}
+
+.about-area .home-about-right2 .right-mark:after {
+  font-family: sans-serif;
+  content: "\201D";
+  font-size: 50px;
+  color:#B5B5B5;
+  left: 14%;
+  top: 100%;
+  position: absolute;
+}
+
 .about-area .home-about-right2 h3{
   font-size: 18px;
   color: #8E8E8E;
@@ -2098,6 +2157,9 @@ background-color: #FFA300;
       margin-top: 25px;
       text-align: center;
     }
+    .about-area .vision {
+      text-align: center;
+    }
     }
 
 .home-about-right h1 {
@@ -2112,7 +2174,21 @@ background-color: #FFA300;
 
 @media (max-width: 991px) {
   .home-about-right2 {
-    margin-top: 20px; } }
+    margin-top: 20px; } 
+    .about-area .home-about-right2 .left-mark:before {
+      font-size: 32px;
+      left: -1%;
+      top: -8%;
+      position: absolute;
+    }
+    
+    .about-area .home-about-right2 .right-mark:after {
+      font-size: 32px;
+      left: 53%;
+      top: 53%;
+      position: absolute;
+    }
+  }
 
 
 
@@ -2271,14 +2347,14 @@ background-color: #FFA300;
     
 
 .fact-area {
-  padding: 60px 0 0;
+  padding: 90px 0 0;
   position: relative; 
 }  
 
 .fact-area .fact-box h2{
   font-size: 28px;
   font-family: "Poppins", sans-serif;
-  font-weight: 900;
+  font-weight: 1200;
   margin-bottom: 5px;
 }
 
@@ -2511,7 +2587,7 @@ background-color: #FFA300;
 .contact-form .submit-btn fieldset
 {
   text-align: right;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .contact-form input {
@@ -2520,8 +2596,8 @@ background-color: #FFA300;
   width: 90%;
   height: 50px;
   outline: none;
-  padding-left: 20px;
-  padding-right: 30px;
+  padding-left: 30px;
+  padding-right: 20px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -2551,11 +2627,12 @@ background-color: #FFA300;
 
 .contact-form i{
   position: absolute;
-  top: 14px;
-  right: 28px;
+  top: 16px;
+  left: 28px;
 }
 
 .contact-form label{
+  display: block;
   text-align: left;
 }
 
@@ -2585,7 +2662,7 @@ background-color: #FFA300;
   padding: 5px 5px;
   background-color: white;
   border: 1px solid #FFA300;
-  border-radius: 4px;
+  border-radius: 10px;
   text-decoration: none;
 }
 
@@ -2606,7 +2683,11 @@ background-color: #FFA300;
   color: #7a7a7a;
 }
 
-
+@media (max-width: 991px) {
+  .contact-form label{
+    display: none;
+  }
+}
 
 .whole-wrap {
   background-color: #fff; }
