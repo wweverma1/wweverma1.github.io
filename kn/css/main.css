@@ -721,6 +721,8 @@ td, th {
     background-color: #FFA300;
     color: #fff !important;
     border: 1px solid transparent; }
+    .buttons:hover a{
+    color: white; }
     .buttons:hover p span {
       color: #fff; }
   .buttons a {
@@ -2129,7 +2131,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-area .home-about-right2 .special-btn {
   margin-top: 20px;
-  padding: 5px 5px;
+  padding: 10px 25px 10px;
   display: inline-block;
   border: 1px solid #FFA300;
   border-radius: 10px;
@@ -2330,7 +2332,7 @@ background-color: #FFA300;
         border-radius: 10px;
         text-decoration: none;
         display: inline-block;
-        padding: 5px 5px;
+        padding: 8px 20px 8px;
     }
       
     .feature-area .single-feature .special-btn a {
@@ -2659,7 +2661,7 @@ background-color: #FFA300;
 
 .contact-form .main-button {
   color: #FFA300;
-  padding: 5px 5px;
+  padding: 8px 20px 8px;
   background-color: white;
   border: 1px solid #FFA300;
   border-radius: 10px;
