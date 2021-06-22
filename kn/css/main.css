@@ -1791,7 +1791,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   border-bottom: 2px solid white; }
 
-  .nav-menu .menu-active {
+  .nav-menu .home {
     border-bottom: 4px solid #FFA300; }
 
   .nav-menu ul li > a {
