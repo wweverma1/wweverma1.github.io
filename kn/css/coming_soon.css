@@ -1,0 +1,47 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+  .bgimg {
+    background-image: 
+    /* top, transparent red */
+    linear-gradient(
+      rgba(0, 0, 0, 0.555), 
+      rgba(0, 0, 0, 0.644)
+    ),
+    /* your image */
+    url('../img/coming_soon.jpg');
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: white;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 25px;
+  }
+  
+  .topleft {
+    position: absolute;
+    top: 5%;
+    left: 4%;
+  }
+  
+  .bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+  }
+  
+  .middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  hr {
+    margin: auto;
+    width: 40%;
+  }
