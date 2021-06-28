@@ -1,6 +1,6 @@
 <?php    
 
-    ini_set('display_errors', 1);
+    //ini_set('display_errors', 1);
     include('phpMailer/mailer_config.php');
     
     require $_SERVER['DOCUMENT_ROOT'] . '/kn/phpMailer/Exception.php';
@@ -15,10 +15,10 @@
 
         function problem($error)
         {
-            echo "We are very sorry, but there were error(s) found with the form you submitted. ";
-            echo "These errors appear below.<br><br>";
-            echo $error . "<br><br>";
-            echo "Please go back and fix these errors.<br><br>";
+            //echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+            //echo "These errors appear below.<br><br>";
+            //echo $error . "<br><br>";
+            //echo "Please go back and fix these errors.<br><br>";
             die();
         }
 
@@ -35,6 +35,7 @@
         $email = $_POST['email']; // required
         $message = $_POST['message']; // required
         $number = $_POST['cnumber']; //required
+        $page = $_POST['page'];
 
         $error_message = "";
         $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
@@ -98,7 +99,9 @@
                                 );
                 $mail->send();
 
-
-        header('location: index.html');
+        if($page=="1")
+            header('location: index.html');
+        elseif ($page=="2")
+            header('location: about.html');
     }
 ?>
