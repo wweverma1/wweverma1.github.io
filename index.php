@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Aditya Verma</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/13/13706.png" type="image/gif">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+      var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+    </script>
+    </script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </head>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Aditya</a>
+        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> &nbsp;
+        </button>
+
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav nav ml-auto">
+            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Education</span></a></li>
+            <li class="nav-item"><a href="#services-section" class="nav-link"><span>Courses & Skills</span></a></li>
+            <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section id="home-section" class="hero">
+      <div class="home-slider  owl-carousel">
+        <div class="slider-item ">
+          <div class="overlay"></div>
+          <div class="container">
+            <div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+              <div class="d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+                <div class="text">
+                  <span class="subheading">Namaste 🙏</span>
+                  <br><br><br><br><br>
+                  <h1 class="mb-4 mt-3">I'm <span>Aditya Verma</span></h1>
+                  <br>
+                  <h2 class="mb-4">I'm a 
+                    <span
+                 class="txt-rotate"
+                 data-period="2000"
+                 data-rotate='[" Developer.", " Competitive Programmer."]'>
+                </span>
+            </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+      <div class="container">
+        <div class="row justify-content-center pb-3">
+              <div class="col-md-12 heading-section text-center ftco-animate">
+                <h1 class="big big-2">About</h1>
+                <h2 class="mb-4">About Me</h2>
+                <p>I am a second year undergraduate student at <strong>IIT Kharagpur</strong>.<br>I'm a performance driven <strong>Competitive Programmer</strong> and <strong>Full Stack Developer</strong>.<br>I'm a goal oriented, quick learner and a hardworking person.</p>
+                <table style="margin-left: auto; margin-right: auto;">
+                <ul class="about-info mt-4">
+                  <li><span>Name:</span> <span>Aditya Verma</span></li>
+                  <li><span>Date of birth:</span> <span>29 October</span></li>
+                  <li><span>Address:</span> <span>LLR Hall, IIT Kharagpur, Kharagpur, WB</span></li>
+                  <li><span>Zip code:</span> <span>822113</span></li>
+                  <li><span>Email:</span> <span>wweverma1@gmail.com</span></li>
+                  <li><span>Phone: </span> <span>+91-7668745992</span></li>
+                </ul>
+                </table>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Education</h1>
+            <h2 class="mb-4">My Education</h2>
+            <p>I have been very dedicated and consistent as a student and have always passed my classes with flying numbers.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="resume-wrap ftco-animate">
+              <h2 style="color: #ffbd39;">Bachelor's & Master's Degree</h2>
+              <span class="position">IIT Kharagpur</span>
+              <p class="mt-4">I'm a third year UG student at IIT KGP enrolled in a Dual Degree Course in the department of Chemistry.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="resume-wrap ftco-animate">
+              <h2 style="color: #ffbd39;">Intermediate ISC Board</h2>
+              <span class="position">Spring Fields College</span>
+              <p class="mt-4">Passed the XII standard with PCM + Computers + Physical Education, with an aggregate of <strong>93%</strong>.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="resume-wrap ftco-animate">
+              <h2 style="color: #ffbd39;">High School ICSE Board</h2>
+              <span class="position">Spring Fields College</span>
+              <p class="mt-4">Passed the XII standard with PCMB + Computers + Hindi, with an aggregate of <strong>93.6%</strong>.</p>
+            </div>
+          </div>
+        </div>
+        
+      <!--  <div class="row justify-content-center mt-5">
+          <div class="col-md-6 text-center ftco-animate">
+            <p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+          </div>
+        </div>-->
+        </div>
+    </section>
+
+    <section class="ftco-section" id="services-section">
+      <div class="container">
+        <div class="row justify-content-center py-5 mt-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">My Skills</h1>
+            <h2 class="mb-4">My Skills</h2>
+            <p class="mt-8">These are the skills which I have acquired with my dedication and hard work.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 animate-box">
+            <div class="progress-wrap ftco-animate">
+              <h3>Competitive Programming</h3>
+              <div class="progress">
+                <div class="progress-bar color-3" role="progressbar" aria-valuenow="70"
+                  aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                  <span>70%</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 animate-box">
+            <div class="progress-wrap ftco-animate">
+              <h3>Development</h3>
+              <div class="progress">
+                <div class="progress-bar color-1" role="progressbar" aria-valuenow="80"
+                  aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                  <span>80%</span>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br><br><br><br>
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Relevent Courses</h1>
+            <h2 class="mb-4">Relevent Courses</h2>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center d-flex ftco-animate">
+            <div class="services-1">
+              <div class="desc">
+                <h3 class="mt-5">DESIGN & ANALYSIS OF ALGORITHMS</h3>
+                <h4 class="mt-4">MA21007</h4> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center d-flex ftco-animate">
+            <div class="services-1">
+              <div class="desc">
+                <h3 class="mt-5">PROGRAMMING AND DATA STRUCTURES TUTORIAL AND LABORATORY</h3>
+                <h4 class="mt-4">CS1901</h4> 
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 text-center d-flex ftco-animate">
+            <div class="services-1">
+              <div class="desc">
+                <h3 class="mt-5">Programming and Data Structures Theory</h3>
+                <h4 class="mt-4">CS10001</h4> 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center d-flex ftco-animate">
+            <div class="services-1">
+              <div class="desc">
+                <h3 class="mt-5">The Complete Web Developer in 2021 Zero to Mastery</h3> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+ 
+
+    <section class="ftco-section ftco-project" id="projects-section">
+      <div class="container">
+        <div class="row justify-content-center pb-5">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">My Projects</h2>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://news.cnrs.fr/sites/default/files/styles/visuel_principal/public/assets/images/129714169-72dpi.jpg?itok=9uJ8QoKP);">
+              <div class="overlay"></div>
+              <div class="text text-center p-4">
+                <a href="https://mern-memories-webapp.herokuapp.com/" target="_blank">
+                <h3>Memories Webapp</h3>
+                <span>Self Project</span>
+                </a>
+              </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/qr.jpg);">
+              <div class="overlay"></div>
+                <div class="text text-center p-4">
+                  <a href="https://github.com/wweverma1/TFPS_Equipment_Manager" target="_blank">
+                <h3>Equipments Inventory Management using QR Code</h3>
+                <span>Web Development Internship</span>
+              </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://c4.wallpaperflare.com/wallpaper/206/268/839/pose-muscle-muscle-rod-press-hd-wallpaper-preview.jpg);">
+              <div class="overlay"></div>
+              
+              <div class="text text-center p-4">
+                <!--<a href="" target="_blank">-->
+                <h3>Multi branch GYM Management System</h3>
+                <span>Web Development Internship</span>
+                <!--</a>-->
+              </div>
+              
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://miro.medium.com/max/670/1*GFUkrDwUNAm1wjCHKbD7kQ.jpeg);">
+              <div class="overlay"></div>
+              
+              <div class="text text-center p-4">
+                <a href="http://adityaverma.tech/shrink_url/" target="_blank">
+                <h3>URL Shrink</h3>
+                <span>Self Project</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-md-12">
+            <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(https://www.desktopbackground.org/p/2012/05/24/394881_camera-wallpapers-photography-wallpapers_1680x1050_h.jpg); border: 3px solid white;">
+              <div class="overlay"></div>
+              
+              <div class="text text-center p-4">
+                <a href="https://react-mentor.netlify.app/" target="_blank">
+                <h3>Mentor App</h3>
+                <span>Self Project</span>
+                </a>
+              </div>
+              
+            </div>
+          </div>
+            </div>
+          
+          </div>
+      
+    
+    </section>
+
+
+
+    <!--<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+        <div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div style="display: none;" class="block-18">
+              <div class="text">
+                <strong class="number" data-number="100">0</strong>
+                <span>Awards</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Complete Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="3">0</strong>
+                <span>Happy Customers</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div style="display: none;" class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>-->
+
+    <section class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-7 ftco-animate text-center">
+            <h2>Have an idea to work on ?<br>Let's Talk</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <a href="https://wa.me/917668745992?text=Hey Aditya!"><h2 class="mb-4">Contact Me</h2></a>
+            <p>Feel free to talk to me about your project/ideas.</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-map-signs"></span>
+              </div>
+              <h3 class="mb-4">Address</h3>
+              <p>LLR Hall, IIT KGP</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <a href="tel:7668745992"><span class="icon-phone2"></span></a>
+              </div>
+              <h3 class="mb-4">Contact Number</h3>
+              <p><a href="tel:7668745992">+91-7668745992</a></p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <a href = "mailto:wweverma1@gmail.com?subject = Enquiry&body = Hi Aditya !"><span class="icon-paper-plane"></span></a>
+              </div>
+              <h3 class="mb-4">Email Address</h3>
+              <p>
+                <a href = "mailto:wweverma1@gmail.com?subject = Enquiry&body = Hi Aditya !">
+                  wweverma1@gmail.com
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+            <div class="align-self-stretch box p-4 text-center">
+              <div class="icon d-flex align-items-center justify-content-center">
+                <span class="icon-globe"></span>
+              </div>
+              <h3 class="mb-4">Website</h3>
+              <p><a href="https://wweverma1.github.io/">wweverma1.github.io/</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+    <footer class="ftco-footer ftco-section">
+      <div class="container">
+             <h3 class="mb-4" style="font-weight: normal;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;  text-align: center;">Connect with Me</h3>
+             <div style="text-align: center; font-size: 25px;">
+             <a href="https://www.linkedin.com/in/aditya-verma-7236a2107/" target="_blank"><span style="text-align: center;" class="icon-linkedin"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="https://www.facebook.com/profile.php?id=100005749835976" target="_blank"><span style="text-align: center;" class="icon-facebook"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="https://www.instagram.com/wweverma1/" target="_blank"><span class="icon-instagram"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="https://wa.me/917668745992?text=Hey Aditya!"><span class="icon-whatsapp"></span></a>&nbsp;&nbsp;&nbsp;&nbsp;
+             <a href="https://github.com/wweverma1" target="_blank"><span style="text-align: center;" class="icon-github"></span></a>
+          </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p><br><br>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<br>Made with <i style="color: red;" class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://www.facebook.com/profile.php?id=100005749835976" target="_blank">Aditya Verma</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
