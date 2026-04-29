@@ -10,6 +10,7 @@
   var themeToggle = function() {
     var storageKey = 'portfolio-theme';
     var toggleButton = document.getElementById('theme-toggle');
+    var toggleIcon = toggleButton ? toggleButton.querySelector('.theme-toggle-icon') : null;
     var mediaQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
     var userSelectedTheme = false;
 
@@ -26,7 +27,10 @@
     var applyTheme = function(theme, persistPreference) {
       document.documentElement.setAttribute('data-theme', theme);
       toggleButton.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
-      toggleButton.textContent = theme === 'dark' ? 'Light theme' : 'Dark theme';
+      toggleButton.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      if (toggleIcon) {
+        toggleIcon.textContent = theme === 'dark' ? '☀' : '☾';
+      }
 
       if (persistPreference) {
         try {
@@ -342,7 +346,7 @@
       if (willExpand) {
         legacyProjects.removeAttribute('hidden');
         toggleButton.setAttribute('aria-expanded', 'true');
-        toggleButton.textContent = 'Hide legacy projects';
+        toggleButton.textContent = 'Hide Projects';
       } else {
         legacyProjects.setAttribute('hidden', '');
         toggleButton.setAttribute('aria-expanded', 'false');
