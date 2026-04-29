@@ -269,9 +269,32 @@
     fixedContentPos: false
   });
 
+  var legacyProjectsToggle = function() {
+    var toggleButton = document.getElementById('toggle-legacy-projects');
+    var legacyProjects = document.getElementById('legacy-projects');
+
+    if (!toggleButton || !legacyProjects) {
+      return;
+    }
+
+    toggleButton.addEventListener('click', function() {
+      var willExpand = legacyProjects.hasAttribute('hidden');
+
+      if (willExpand) {
+        legacyProjects.removeAttribute('hidden');
+        toggleButton.setAttribute('aria-expanded', 'true');
+        toggleButton.textContent = 'Hide legacy projects';
+      } else {
+        legacyProjects.setAttribute('hidden', '');
+        toggleButton.setAttribute('aria-expanded', 'false');
+        toggleButton.textContent = 'View all projects';
+      }
+    });
+  };
+  legacyProjectsToggle();
+
 
 
 
 
 })(jQuery);
-
