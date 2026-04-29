@@ -7,6 +7,65 @@
 
 	"use strict";
 
+  var themeToggle = function() {
+    var storageKey = 'portfolio-theme';
+    var toggleButton = document.getElementById('theme-toggle');
+    var mediaQuery = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    var userSelectedTheme = false;
+
+    if (!toggleButton) {
+      return;
+    }
+
+    try {
+      userSelectedTheme = localStorage.getItem(storageKey) === 'light' || localStorage.getItem(storageKey) === 'dark';
+    } catch (error) {
+      userSelectedTheme = false;
+    }
+
+    var applyTheme = function(theme, persistPreference) {
+      document.documentElement.setAttribute('data-theme', theme);
+      toggleButton.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+      toggleButton.textContent = theme === 'dark' ? 'Light theme' : 'Dark theme';
+
+      if (persistPreference) {
+        try {
+          localStorage.setItem(storageKey, theme);
+          userSelectedTheme = true;
+        } catch (error) {
+          // Ignore storage issues and keep theme in-memory only.
+        }
+      }
+    };
+
+    var currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme !== 'light' && currentTheme !== 'dark') {
+      currentTheme = mediaQuery && mediaQuery.matches ? 'dark' : 'light';
+    }
+    applyTheme(currentTheme, false);
+
+    toggleButton.addEventListener('click', function() {
+      var activeTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      applyTheme(activeTheme === 'dark' ? 'light' : 'dark', true);
+    });
+
+    if (mediaQuery) {
+      var syncWithSystemTheme = function(event) {
+        if (userSelectedTheme) {
+          return;
+        }
+        applyTheme(event.matches ? 'dark' : 'light', false);
+      };
+
+      if (typeof mediaQuery.addEventListener === 'function') {
+        mediaQuery.addEventListener('change', syncWithSystemTheme);
+      } else if (typeof mediaQuery.addListener === 'function') {
+        mediaQuery.addListener(syncWithSystemTheme);
+      }
+    }
+  };
+  themeToggle();
+
 	$(window).stellar({
     responsive: true,
     parallaxBackgrounds: true,

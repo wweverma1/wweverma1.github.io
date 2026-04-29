@@ -8,6 +8,27 @@
     <meta property="og:image" content="https://wweverma1.github.io/images/preview.png" />
     <meta name="og:description" content="Portfolio of Aditya Verma - AI Engineer and Full-Stack Developer." />
     <meta property="og:url" content="https://wweverma1.github.io" />
+    <script>
+      (function() {
+        var storageKey = 'portfolio-theme';
+        var theme = 'light';
+
+        try {
+          var savedTheme = localStorage.getItem(storageKey);
+          if (savedTheme === 'light' || savedTheme === 'dark') {
+            theme = savedTheme;
+          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+          }
+        } catch (error) {
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            theme = 'dark';
+          }
+        }
+
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/13/13706.png" type="image/gif" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
 
@@ -38,6 +59,11 @@
             <li class="nav-item"><a href="#services-section" class="nav-link"><span>Skills</span></a></li>
             <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
             <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+            <li class="nav-item nav-theme-toggle">
+              <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
+                Theme
+              </button>
+            </li>
           </ul>
         </div>
       </div>
