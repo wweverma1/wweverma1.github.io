@@ -9738,3 +9738,397 @@ textarea.form-control {
 img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
     display: none;
 }
+
+/* === Portfolio Refresh 2026: Tokenized Light/Dark Theme === */
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-muted: #e9f1f9;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #cbd5e1;
+  --accent: #0d9488;
+  --accent-strong: #0f766e;
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --nav-link: #0f172a;
+  --shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+  --hero-gradient: linear-gradient(140deg, #dbeafe 0%, #e0f2fe 48%, #ccfbf1 100%);
+}
+
+html[data-theme='dark'] {
+  --bg: #07111f;
+  --surface: #0f1d30;
+  --surface-muted: #11253d;
+  --text: #e2e8f0;
+  --muted: #9fb0c8;
+  --border: #2a3a52;
+  --accent: #2dd4bf;
+  --accent-strong: #14b8a6;
+  --nav-bg: rgba(7, 17, 31, 0.9);
+  --nav-link: #dbeafe;
+  --shadow: 0 16px 36px rgba(2, 6, 23, 0.42);
+  --hero-gradient: linear-gradient(140deg, #0a1526 0%, #11243d 52%, #10353f 100%);
+}
+
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+a,
+a:hover {
+  color: var(--accent);
+}
+
+.ftco-navbar-light {
+  background: var(--nav-bg) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.ftco-navbar-light .navbar-brand,
+.ftco-navbar-light .navbar-brand:hover,
+.ftco-navbar-light .navbar-brand:focus,
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+  color: var(--nav-link) !important;
+}
+
+.ftco-navbar-light.scrolled {
+  background: var(--nav-bg) !important;
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link.active {
+  color: var(--accent) !important;
+}
+
+.ftco-navbar-light .navbar-nav > .nav-item > .nav-link span:before {
+  background: var(--accent);
+}
+
+.nav-theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 0.95rem;
+  line-height: 1;
+  transition: all 0.25s ease;
+}
+
+.theme-toggle:hover,
+.theme-toggle:focus {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  outline: none;
+}
+
+.site-hero {
+  position: relative;
+  padding-top: 9rem;
+  padding-bottom: 4.5rem;
+  background: var(--hero-gradient);
+}
+
+.min-vh-80 {
+  min-height: 72vh;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.8rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(13, 148, 136, 0.14);
+  color: var(--accent-strong);
+  font-size: 0.84rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  color: var(--text);
+  font-size: clamp(2.3rem, 5vw, 4.1rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.8rem;
+}
+
+.hero-subtitle {
+  color: var(--text);
+  font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+
+.hero-meta {
+  color: var(--muted);
+  margin: 0 auto 1.7rem;
+  max-width: 870px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.section-shell {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.section-shell .heading-section p,
+.section-shell p,
+.section-shell li,
+.section-shell span,
+.section-shell h3,
+.section-shell h2,
+.section-shell h1 {
+  color: var(--text);
+}
+
+.section-shell .heading-section p,
+.section-shell p,
+.section-shell li {
+  color: var(--muted);
+}
+
+.big.big-2 {
+  color: rgba(148, 163, 184, 0.2) !important;
+}
+
+.profile-highlights,
+.timeline-grid,
+.stack-grid,
+.project-grid,
+.contact-grid {
+  row-gap: 1.25rem;
+}
+
+.profile-card,
+.resume-card,
+.skill-card,
+.project-card,
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.3rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.profile-card:hover,
+.resume-card:hover,
+.skill-card:hover,
+.project-card:hover,
+.contact-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 38px rgba(15, 23, 42, 0.16);
+}
+
+html[data-theme='dark'] .profile-card:hover,
+html[data-theme='dark'] .resume-card:hover,
+html[data-theme='dark'] .skill-card:hover,
+html[data-theme='dark'] .project-card:hover,
+html[data-theme='dark'] .contact-card:hover {
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.6);
+}
+
+.resume-card ul {
+  margin-bottom: 0;
+  padding-left: 1.1rem;
+}
+
+.resume-card li,
+.project-card p,
+.skill-card p,
+.contact-card p,
+.profile-card p {
+  color: var(--muted);
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 0.65rem;
+}
+
+.card-header-row h3 {
+  margin-bottom: 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+
+.card-header-row span,
+.stack-line,
+.project-period {
+  color: var(--muted) !important;
+  font-size: 0.92rem;
+}
+
+.skill-card h3,
+.project-card h3,
+.profile-card h3,
+.resume-card h3,
+.contact-card h3 {
+  color: var(--text);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.project-card h3 a,
+.resume-card h3 a {
+  color: var(--text);
+}
+
+.project-card h3 a:hover,
+.resume-card h3 a:hover {
+  color: var(--accent);
+}
+
+.legacy-card {
+  background: var(--surface-muted);
+}
+
+.ftco-section {
+  padding: 4.9rem 0;
+}
+
+.btn-primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background: var(--accent-strong) !important;
+  border-color: var(--accent-strong) !important;
+}
+
+.btn-outline-light {
+  border-color: var(--border) !important;
+  color: var(--text) !important;
+  background: transparent !important;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  background: var(--surface) !important;
+  border-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+.contact-card .icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 999px;
+  margin: 0 auto 0.85rem;
+  background: rgba(13, 148, 136, 0.14);
+}
+
+.contact-card .icon span {
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.ftco-footer {
+  background: var(--surface) !important;
+  border-top: 1px solid var(--border);
+  padding: 2.8rem 0;
+}
+
+.footer-title {
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 0.85rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.35rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.resume-link {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.resume-link:hover {
+  color: var(--accent);
+}
+
+#ftco-loader {
+  background: var(--bg);
+}
+
+@media (max-width: 991.98px) {
+  .ftco-navbar-light {
+    background: var(--nav-bg) !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-theme-toggle {
+    margin-left: 0;
+    margin-top: 0.55rem;
+  }
+
+  .theme-toggle {
+    width: 100%;
+  }
+
+  .card-header-row {
+    flex-direction: column;
+  }
+
+  .site-hero {
+    padding-top: 7.2rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .profile-card,
+  .resume-card,
+  .skill-card,
+  .project-card,
+  .contact-card {
+    padding: 1.1rem;
+  }
+}
