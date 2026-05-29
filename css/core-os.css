@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #f4f4f5;
+  --text: #3f3f46;
+  --heading: #18181b;
+  --accent: #d97706; /* Amber for light mode */
+  --border: #e4e4e7;
+  --block-bg: #ffffff;
+  --muted: #71717a;
+  --term-kw: #a626a4;
+  --term-str: #50a14f;
+  --term-func: #4078f2;
+  --term-type: #986801;
+  --term-var: #e45649;
+}
+
+[data-theme="dark"] {
+  --bg: #09090b;
+  --text: #a1a1aa;
+  --heading: #f4f4f5;
+  --accent: #f59e0b; /* Amber/Gold for dark mode */
+  --border: #27272a;
+  --block-bg: #0f0f11;
+  --muted: #71717a;
+  --term-kw: #c678dd;
+  --term-str: #98c379;
+  --term-func: #61afef;
+  --term-type: #e5c07b;
+  --term-var: #e06c75;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Fira Code', monospace;
+  line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection { background: var(--accent); color: var(--bg); }
+
+.container { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem; }
+
+/* Top Nav / Utilities */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.top-bar button, .top-bar a {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.top-bar button:hover, .top-bar a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Console header */
+header {
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.prompt {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prompt::before { content: 'root@averma:~# '; color: var(--accent); }
+
+h1 { color: var(--heading); font-size: 2.5rem; font-weight: 600; margin: 1rem 0; }
+h2 { color: var(--heading); font-size: 1.5rem; font-weight: 600; margin: 3rem 0 1.5rem; border-left: 3px solid var(--accent); padding-left: 1rem; }
+h3 { color: var(--heading); font-size: 1.1rem; margin-bottom: 0.5rem; }
+h3 a { color: var(--heading); border-bottom: none; }
+h3 a:hover { color: var(--accent); border-bottom: none; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid transparent; transition: border-bottom 0.2s; }
+a:hover { border-bottom: 1px solid var(--accent); }
+
+.sys-block {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  background: var(--block-bg);
+  transition: border-color 0.2s;
+}
+
+.sys-block:hover {
+  border-color: var(--accent);
+}
+
+.sys-meta {
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  font-size: 0.85rem; color: var(--muted); margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;
+}
+
+ul { list-style: none; padding-left: 1.5rem; }
+li { position: relative; margin-bottom: 0.5rem; font-size: 0.95rem; }
+li::before { content: '>'; position: absolute; left: -1.5rem; color: var(--accent); }
+
+.key-val { display: flex; flex-wrap: wrap; margin-bottom: 0.5rem; font-size: 0.9rem; }
+.key { width: 150px; color: var(--muted); }
+.val { color: var(--heading); flex: 1; }
+
+.blink { animation: blink 1s step-end infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.hidden { display: none !important; }
+
+.btn {
+  background: transparent;
+  color: var(--accent);
+  border: 1px dashed var(--accent);
+  padding: 0.5rem 1rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: inline-block;
+  margin-top: 1rem;
+}
+.btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* Nav links jump */
+.nav-jump {
+  display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;
+}
+.nav-jump a {
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-bottom: none;
+}
+.nav-jump a:hover {
+  color: var(--accent);
+}
+
+/* Terminal syntax highlighting colors */
+.term-kw { color: var(--term-kw); } /* keyword (purple) */
+.term-str { color: var(--term-str); } /* string (green) */
+.term-func { color: var(--term-func); } /* function (blue) */
+.term-type { color: var(--term-type); } /* type/class (yellow) */
+.term-var { color: var(--term-var); } /* variable/important (red) */

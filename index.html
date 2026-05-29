@@ -1,445 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Aditya Verma | AI Engineer</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta property="og:title" content="Aditya Verma | AI Engineer" />
-    <meta property="og:image" content="https://wweverma1.github.io/images/preview.png" />
-    <meta name="og:description" content="Portfolio of Aditya Verma - AI Engineer and Full-Stack Developer." />
-    <meta property="og:url" content="https://wweverma1.github.io" />
-    <script>
-      (function() {
-        var storageKey = 'portfolio-theme';
-        var theme = 'light';
+<head>
+  <meta charset="utf-8" />
+  <title>Aditya Verma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:title" content="Aditya Verma | AI Engineer" />
+  <meta property="og:image" content="https://wweverma1.github.io/images/preview.png" />
+  <meta name="og:description" content="Portfolio of Aditya Verma - AI Engineer and Full-Stack Developer." />
+  <meta property="og:url" content="https://wweverma1.github.io" />
 
-        try {
-          var savedTheme = localStorage.getItem(storageKey);
-          if (savedTheme === 'light' || savedTheme === 'dark') {
-            theme = savedTheme;
-          } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            theme = 'dark';
-          }
-        } catch (error) {
-          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            theme = 'dark';
-          }
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E" />
+  
+  <link rel="stylesheet" href="css/core-os.css" />
+
+  <script>
+    // Inline script to prevent FOUC (Flash of Unstyled Content) with themes
+    (function() {
+      var storageKey = 'portfolio-theme';
+      var theme = 'dark'; // Default to dark for Core OS feel
+      try {
+        var savedTheme = localStorage.getItem(storageKey);
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          theme = savedTheme;
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+          theme = 'light';
         }
-
-        document.documentElement.setAttribute('data-theme', theme);
-      })();
-    </script>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%A7%91%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet" />
-
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
-    <link rel="stylesheet" href="css/animate.css" />
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="css/magnific-popup.css" />
-    <link rel="stylesheet" href="css/aos.css" />
-    <link rel="stylesheet" href="css/ionicons.min.css" />
-    <link rel="stylesheet" href="css/flaticon.css" />
-    <link rel="stylesheet" href="css/icomoon.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="200">
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">Aditya Verma</a>
-        <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="oi oi-menu"></span>&nbsp;
-        </button>
-
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav nav ml-auto">
-            <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-            <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-            <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
-            <li class="nav-item"><a href="#services-section" class="nav-link"><span>Skills</span></a></li>
-            <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-            <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-            <li class="nav-item"><a href="assets/docs/Aditya.pdf" class="nav-link" target="_blank" rel="noopener noreferrer"><span>Resume</span></a></li>
-            <li class="nav-item nav-theme-toggle">
-              <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Switch color theme" aria-pressed="false">
-                <span class="theme-toggle-icon" aria-hidden="true">&#9790;</span>
-                <span class="sr-only">Toggle theme</span>
-              </button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <section id="home-section" class="site-hero ftco-section">
-      <div class="container">
-        <div class="row align-items-center justify-content-center min-vh-80">
-          <div class="col-lg-10 text-center" data-aos="fade-up">
-            <p class="eyebrow">Hello, I am &#128075;</p>
-            <h1 class="hero-title">Aditya Verma</h1>
-            <p class="hero-subtitle">AI Engineer and Full Stack Software Developer building production computer vision and LLM systems.</p>
-            <div class="hero-actions">
-              <a href="#projects-section" class="btn btn-primary hero-project-btn py-3 px-4">Explore Projects</a>
-              <a href="#contact-section" class="btn btn-outline-light py-3 px-4">Get in Touch</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section section-shell" id="about-section">
-      <div class="container">
-        <div class="row justify-content-center pb-4">
-          <div class="col-lg-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">About</h1>
-            <h2 class="mb-4">About Me</h2>
-            <p>
-              I am an AI Engineer at AWL Japan Inc., focused on deploying reliable vision and multimodal AI systems to production environments.
-              My work spans edge inference pipelines, cross-language integrations, and low-latency backend services with measurable reliability gains.
-            </p>
-          </div>
-        </div>
-        <div class="row profile-highlights">
-          <div class="col-md-4 d-flex">
-            <div class="profile-card w-100">
-              <h3>Current Focus</h3>
-              <p>Computer Vision, VLM-driven anomaly detection, and robust AI operations on edge devices.</p>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex">
-            <div class="profile-card w-100">
-              <h3>Core Stack</h3>
-              <p>C#, .NET, C++, Python, Golang, Flask, ExpressJS, WebSockets, PostgreSQL, Redis, Qdrant.</p>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex">
-            <div class="profile-card w-100">
-              <h3>Strengths</h3>
-              <p>End-to-end delivery, high-concurrency backend design, and multilingual AI product execution.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section section-shell" id="resume-section">
-      <div class="container">
-        <div class="row justify-content-center pb-4">
-          <div class="col-lg-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Experience</h1>
-            <h2 class="mb-4">Professional Experience</h2>
-          </div>
-        </div>
-
-        <div class="row timeline-grid">
-          <div class="col-lg-12 d-flex">
-            <article class="resume-card w-100">
-              <div class="card-header-row">
-                <h3>AI Engineer, <a href="https://awl.co.jp/en/" target="_blank" rel="noopener noreferrer">AWL Japan Inc.</a></h3>
-                <span>May 2024 - Present</span>
-              </div>
-              <p class="stack-line"><strong>Tech:</strong> C#, .NET, C++, Kotlin, Computer Vision, IoT Devices, Azure, CI/CD</p>
-              <ul>
-                <li>Built a core C# library that standardizes inference across client apps via P/Invoke-based C++ CV pipeline integration.</li>
-                <li>Engineered multi-camera tracking with person detection and face recognition for persistent IDs across feeds.</li>
-                <li>Developed real-time anomaly safety reporting MVP using VLMs and deployed it in Tokyo production environments.</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="col-lg-6 d-flex">
-            <article class="resume-card w-100">
-              <div class="card-header-row">
-                <h3>Software Development Engineer Intern, <a href="https://medium.com/@tomerbrener/the-future-of-off-ramping-705cd34e9c03" target="_blank" rel="noopener noreferrer">Hypermatter Labs</a></h3>
-                <span>2022</span>
-              </div>
-              <p class="stack-line"><strong>Tech:</strong> TypeScript, ExpressJS, Web3 SDKs, Kotlin, Jetpack Compose</p>
-              <ul>
-                <li>Engineered backend for early AirPay versions to convert Aptos on-chain assets to local fiat in real time.</li>
-                <li>Implemented low-latency APIs with BCS serialization for executing and signing smart-contract fund flows.</li>
-              </ul>
-            </article>
-          </div>
-
-          <div class="col-lg-6 d-flex">
-            <article class="resume-card w-100">
-              <div class="card-header-row">
-                <h3>Software Development Engineer Intern, <a href="https://play.google.com/store/apps/details?id=krishi.mitra.grampracharak" target="_blank" rel="noopener noreferrer">Krishi Network</a></h3>
-                <span>2021</span>
-              </div>
-              <p class="stack-line"><strong>Tech:</strong> Python, Flask, PostgreSQL, Redis, AWS S3, ETL, REST APIs</p>
-              <ul>
-                <li>Scaled Gram Pracharak backend to serve 10,000+ rural users with optimized caching and pagination.</li>
-                <li>Built migration and ingestion pipelines that improved engagement and supported secure multimodal data flows.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-
-        <div class="row justify-content-center pt-5">
-          <div class="col-lg-10 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Education</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12 d-flex">
-            <article class="resume-card education-card w-100">
-              <div class="card-header-row">
-                <h3>Indian Institute of Technology Kharagpur</h3>
-                <span>2019 - 2024</span>
-              </div>
-              <p>Integrated Bachelors &amp; Masters, Chemistry</p>
-              <p>Minor in Computer Science &amp; Engineering | Micro in Artificial Intelligence &amp; Entrepreneurship</p>
-              <p><strong>CGPA:</strong> 8.5 / 10.0</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section section-shell" id="services-section">
-      <div class="container">
-        <div class="row justify-content-center pb-4">
-          <div class="col-lg-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Skills</h1>
-            <h2 class="mb-4">Technical Skills &amp; Highlights</h2>
-          </div>
-        </div>
-
-        <div class="row stack-grid">
-          <div class="col-md-6 col-lg-3 d-flex">
-            <div class="services-1 skill-card w-100">
-              <h3>Languages</h3>
-              <p>Python, C#, C++, JavaScript, TypeScript, Golang, SQL, YAML</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-            <div class="services-1 skill-card w-100">
-              <h3>Applied AI &amp; ML</h3>
-              <p>RAG Pipelines, LLMs, VLMs, Vector DBs, Computer Vision, Prompt Engineering, Entity Resolution</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-            <div class="services-1 skill-card w-100">
-              <h3>Backend &amp; Frameworks</h3>
-              <p>Flask, .NET, Node.js, ExpressJS, KMP, Microservices, WebSockets, REST APIs, ReactJS</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex">
-            <div class="services-1 skill-card w-100">
-              <h3>Databases &amp; Cloud</h3>
-              <p>Qdrant, PostgreSQL, Redis, MongoDB, AWS, Azure, Docker, Bash, CI/CD Pipelines</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row pt-4 achievements-row">
-          <div class="col-lg-6 d-flex">
-            <article class="resume-card w-100">
-              <h3>Awards &amp; Achievements</h3>
-              <ul>
-                <li>500+ DSA problems solved, <a href="https://codeforces.com/profile/wweverma1" target="_blank" rel="noopener noreferrer">Codeforces Expert</a> and <a href="https://www.hackerrank.com/profile/wweverma1" target="_blank" rel="noopener noreferrer">HackerRank 5-star profile</a>.</li>
-                <li>Google Kick Start 2022 Round D global rank 2502 (Top 8% among 30,000+ participants).</li>
-                <li>Completed <a href="https://hacktoberfest.com/" target="_blank" rel="noopener noreferrer">Hacktoberfest</a> twice with 25 accepted PRs across 10 open-source repositories.</li>
-                <li><strong>Relevant Coursework:</strong> Machine Learning Foundations, Big Data Processing, Digital Image Processing, Design &amp; Analysis of Algorithms.</li>
-              </ul>
-            </article>
-          </div>
-          <div class="col-lg-6 d-flex">
-            <article class="resume-card w-100">
-              <h3>Extracurricular Activities</h3>
-              <ul>
-                <li>Led a 39-student social work team for rural education and tree plantation initiatives.</li>
-                <li>Mentored 10 freshmen at IIT KGP for academic, social, and personal development.</li>
-                <li>Won IIT KGP Valorant tournament as in-game leader and worked on cinematography/editing projects.</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section ftco-project section-shell" id="projects-section">
-      <div class="container">
-        <div class="row justify-content-center pb-4">
-          <div class="col-lg-10 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Self Projects</h2>
-          </div>
-        </div>
-
-        <div class="row project-grid">
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card w-100">
-              <h3><a href="https://sachai.chat/" target="_blank" rel="noopener noreferrer">SachAI</a></h3>
-              <p class="project-period">Jan 2026 - Mar 2026</p>
-              <p>WhatsApp assistant for misinformation control using multilingual RAG, SynthID checks, and multimodal verification workflows.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card w-100">
-              <h3><a href="https://pocket-ninja.netlify.app/" target="_blank" rel="noopener noreferrer">PocketNinja</a></h3>
-              <p class="project-period">Oct 2025 - Dec 2025</p>
-              <p>Crowdsourced grocery-price intelligence platform using OCR, vision LLMs, and entity resolution for Japanese script variants.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card w-100">
-              <h3><a href="https://connectkgp.netlify.app/" target="_blank" rel="noopener noreferrer">ConnectKGP</a></h3>
-              <p class="project-period">Feb 2024 - May 2024</p>
-              <p>Pseudonymous social platform powered by WebSockets, WebRTC, and autonomous LLM moderation for real-time communication.</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="row justify-content-center pt-3">
-          <div class="col-lg-10 text-center">
-            <button id="toggle-legacy-projects" class="btn btn-outline-light py-2 px-4" type="button" aria-controls="legacy-projects" aria-expanded="false">
-              View all projects
-            </button>
-          </div>
-        </div>
-
-        <div id="legacy-projects" class="row project-grid legacy-projects pt-4" hidden>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card legacy-card w-100">
-              <h3><a href="https://play.google.com/store/apps/details?id=krishi.mitra.grampracharak&hl=en_IN&gl=US" target="_blank" rel="noopener noreferrer">Gram Pracharak</a></h3>
-              <p class="project-period">SDE Internship</p>
-              <p>Flask-based backend enhancements and scalable rural-user platform delivery at Krishi Network.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card legacy-card w-100">
-              <h3><a href="https://tfs-frontend.netlify.app/" target="_blank" rel="noopener noreferrer">Movie Ticket Booking System</a></h3>
-              <p class="project-period">Self Project</p>
-              <p>Full-stack ticketing workflow with seat booking flow and user-facing frontend deployment.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card legacy-card w-100">
-              <h3><a href="https://mern-memories-webapp.herokuapp.com/" target="_blank" rel="noopener noreferrer">Memories Webapp</a></h3>
-              <p class="project-period">Self Project</p>
-              <p>Social sharing application built with the MERN stack for image-first post publishing.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card legacy-card w-100">
-              <h3><a href="https://github.com/wweverma1/TFPS_Equipment_Manager" target="_blank" rel="noopener noreferrer">Equipment Inventory Manager</a></h3>
-              <p class="project-period">Web Development Internship</p>
-              <p>QR-driven asset inventory management for streamlined equipment tracking and operations.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card legacy-card w-100">
-              <h3><a href="https://github.com/wweverma1/shrink-url" target="_blank" rel="noopener noreferrer">URL Shrink</a></h3>
-              <p class="project-period">Self Project</p>
-              <p>Compact URL shortening service with persistence and quick redirect support.</p>
-            </article>
-          </div>
-          <div class="col-lg-4 col-md-6 d-flex">
-            <article class="project-card legacy-card w-100">
-              <h3><a href="https://react-mentor.netlify.app/" target="_blank" rel="noopener noreferrer">Mentor App</a></h3>
-              <p class="project-period">Self Project</p>
-              <p>React-based mentoring experience prototype with a clean interaction-focused layout.</p>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section contact-section section-shell" id="contact-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Open to AI engineering, applied ML, and full-stack software opportunities.</p>
-          </div>
-        </div>
-
-        <div class="row contact-grid">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <a class="align-self-stretch box p-4 text-center contact-card contact-card-link w-100" href="mailto:wweverma1@gmail.com">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-paper-plane"></span>
-              </div>
-              <h3 class="mb-4">Email</h3>
-              <p>wweverma1@gmail.com</p>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <a class="align-self-stretch box p-4 text-center contact-card contact-card-link w-100" href="tel:+817084425369">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-phone2"></span>
-              </div>
-              <h3 class="mb-4">Phone</h3>
-              <p>+81-07084425369</p>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <a class="align-self-stretch box p-4 text-center contact-card contact-card-link w-100" href="https://github.com/wweverma1" target="_blank" rel="noopener noreferrer">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-github"></span>
-              </div>
-              <h3 class="mb-4">GitHub</h3>
-              <p>github.com/wweverma1</p>
-            </a>
-          </div>
-
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-            <a class="align-self-stretch box p-4 text-center contact-card contact-card-link w-100" href="https://www.linkedin.com/in/wweverma1/" target="_blank" rel="noopener noreferrer">
-              <div class="icon d-flex align-items-center justify-content-center">
-                <span class="icon-linkedin"></span>
-              </div>
-              <h3 class="mb-4">LinkedIn</h3>
-              <p>linkedin.com/in/wweverma1</p>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <h3 class="footer-title">Connect with Me</h3>
-        <div class="footer-links">
-          <a href="https://www.linkedin.com/in/wweverma1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile"><span class="icon-linkedin"></span></a>
-          <a href="https://github.com/wweverma1" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><span class="icon-github"></span></a>
-          <a href="mailto:wweverma1@gmail.com" aria-label="Send email"><span class="icon-paper-plane"></span></a>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved<br />
-              Made by <a href="https://www.linkedin.com/in/wweverma1/" target="_blank" rel="noopener noreferrer">Aditya Verma</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <div id="ftco-loader" class="show fullscreen">
-      <svg class="circular" width="48px" height="48px">
-        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
-      </svg>
+      } catch (error) {}
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+</head>
+<body>
+  <div class="container">
+    
+    <div class="top-bar">
+      <a href="assets/docs/Aditya.pdf" target="_blank" rel="noopener noreferrer">man resume</a>
+      <button id="theme-toggle">sudo toggle-theme</button>
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery-migrate-3.0.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
-
+    <header>
+      <div class="prompt">whoami</div>
+      <h1>Aditya Verma</h1>
+      <p style="color: var(--heading);"><span class="term-type">AI Engineer</span> & <span class="term-func">Full Stack Developer</span></p>
+      <p style="color: var(--muted); margin-top: 0.5rem;">Building production <span class="term-kw">computer vision</span> & <span class="term-kw">LLM</span> systems.</p>
+    </header>
+
+    <div class="nav-jump">
+      <a href="#about">cd /about</a>
+      <a href="#experience">cd /experience</a>
+      <a href="#skills">cd /skills</a>
+      <a href="#projects">cd /projects</a>
+      <a href="#contact">cd /contact</a>
+    </div>
+
+    <section id="about">
+      <div class="prompt">cat about.txt</div>
+      <div class="sys-block" style="margin-top: 1rem;">
+        <p>I am an AI Engineer at AWL Japan Inc., focused on deploying reliable vision and multimodal AI systems to production environments. My work spans edge inference pipelines, cross-language integrations, and low-latency backend services with measurable reliability gains.</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="prompt">ls -la /experience</div>
+      <h2 style="display:none;">Experience</h2>
+      <div style="margin-top: 1rem;">
+        
+        <div class="sys-block">
+          <div class="sys-meta">
+            <span><a href="https://awl.co.jp/en/" target="_blank">AWL Japan Inc.</a></span>
+            <span>May 2024 - Present</span>
+          </div>
+          <h3>AI Engineer</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem; color: var(--muted);">[<span class="term-str">C#</span>, <span class="term-str">.NET</span>, <span class="term-str">C++</span>, <span class="term-type">Kotlin</span>, <span class="term-kw">Computer Vision</span>, <span class="term-func">Azure</span>]</p>
+          <ul>
+            <li>Built core C# library standardizing inference across apps via P/Invoke C++ CV pipeline integration.</li>
+            <li>Engineered multi-camera tracking with person detection & face recognition for persistent IDs.</li>
+            <li>Developed real-time anomaly safety reporting MVP using VLMs.</li>
+          </ul>
+        </div>
+
+        <div class="sys-block">
+          <div class="sys-meta">
+            <span><a href="https://medium.com/@tomerbrener/the-future-of-off-ramping-705cd34e9c03" target="_blank">Hypermatter Labs</a></span>
+            <span>2022</span>
+          </div>
+          <h3>SDE Intern</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem; color: var(--muted);">[<span class="term-str">TypeScript</span>, <span class="term-func">ExpressJS</span>, <span class="term-type">Web3 SDKs</span>, <span class="term-type">Kotlin</span>]</p>
+          <ul>
+            <li>Engineered backend for early AirPay versions to convert Aptos on-chain assets to local fiat in real time.</li>
+            <li>Implemented low-latency APIs with BCS serialization for executing and signing smart-contract fund flows.</li>
+          </ul>
+        </div>
+
+        <div class="sys-block">
+          <div class="sys-meta">
+            <span><a href="https://play.google.com/store/apps/details?id=krishi.mitra.grampracharak" target="_blank">Krishi Network</a></span>
+            <span>2021</span>
+          </div>
+          <h3>SDE Intern</h3>
+          <p style="font-size: 0.85rem; margin-bottom: 1rem; color: var(--muted);">[<span class="term-str">Python</span>, <span class="term-func">Flask</span>, <span class="term-type">PostgreSQL</span>, <span class="term-var">Redis</span>, <span class="term-func">AWS S3</span>]</p>
+          <ul>
+            <li>Scaled Gram Pracharak backend to serve 10,000+ rural users with optimized caching and pagination.</li>
+            <li>Built migration and ingestion pipelines that improved engagement and supported secure multimodal data flows.</li>
+          </ul>
+        </div>
+
+        <div class="sys-block">
+          <div class="sys-meta">
+            <span>Indian Institute of Technology Kharagpur</span>
+            <span>2019 - 2024</span>
+          </div>
+          <h3>Integrated Bachelors & Masters, Chemistry</h3>
+          <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Minor in Computer Science & Engineering | Micro in Artificial Intelligence & Entrepreneurship</p>
+          <p style="color: var(--muted); font-size: 0.9rem;">CGPA: 8.5 / 10.0</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="prompt">cat skills.json</div>
+      <div class="sys-block" style="margin-top: 1rem;">
+        <div class="key-val"><div class="key"><span class="term-var">"languages"</span>:</div><div class="val">[<span class="term-str">"Python"</span>, <span class="term-str">"C#"</span>, <span class="term-str">"C++"</span>, <span class="term-str">"JavaScript"</span>, <span class="term-str">"TypeScript"</span>, <span class="term-str">"Golang"</span>, <span class="term-str">"SQL"</span>, <span class="term-str">"YAML"</span>]</div></div>
+        <div class="key-val"><div class="key"><span class="term-var">"ai_ml"</span>:</div><div class="val">[<span class="term-str">"RAG Pipelines"</span>, <span class="term-str">"LLMs"</span>, <span class="term-str">"VLMs"</span>, <span class="term-str">"Vector DBs"</span>, <span class="term-str">"Computer Vision"</span>, <span class="term-str">"Prompt Engineering"</span>, <span class="term-str">"Fine Tuning"</span>]</div></div>
+        <div class="key-val"><div class="key"><span class="term-var">"backend"</span>:</div><div class="val">[<span class="term-str">"Flask"</span>, <span class="term-str">".NET"</span>, <span class="term-str">"Node.js"</span>, <span class="term-str">"ExpressJS"</span>, <span class="term-str">"Microservices"</span>, <span class="term-str">"WebSockets"</span>, <span class="term-str">"REST APIs"</span>]</div></div>
+        <div class="key-val"><div class="key"><span class="term-var">"cloud_db"</span>:</div><div class="val">[<span class="term-str">"Qdrant"</span>, <span class="term-str">"PostgreSQL"</span>, <span class="term-str">"Redis"</span>, <span class="term-str">"MongoDB"</span>, <span class="term-str">"AWS"</span>, <span class="term-str">"Azure"</span>, <span class="term-str">"Docker"</span>, <span class="term-str">"CI/CD"</span>]</div></div>
+      </div>
+
+      <div class="prompt">cat achievements.txt</div>
+      <div class="sys-block" style="margin-top: 1rem;">
+        <ul>
+          <li><span class="term-var">500+ DSA problems</span> solved, <a href="https://codeforces.com/profile/wweverma1" target="_blank" class="term-func">Codeforces Expert</a> and <a href="https://www.hackerrank.com/profile/wweverma1" target="_blank" class="term-func">HackerRank 5-star profile</a>.</li>
+          <li><span class="term-type">Google Kick Start 2022</span> Round D <span class="term-var">global rank 2502</span> (<span class="term-kw">Top 8%</span> among 30,000+ participants).</li>
+          <li>Completed <a href="https://hacktoberfest.com/" target="_blank" class="term-str">Hacktoberfest</a> twice with <span class="term-var">25 accepted PRs</span> across 10 open-source repositories.</li>
+          <li>Led a <span class="term-func">39-student social work team</span> for rural education and tree plantation initiatives.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="prompt">ls -la /projects</div>
+      <div style="margin-top: 1rem;">
+        
+        <div class="sys-block">
+          <div class="sys-meta"><span><a href="https://github.com/wweverma1/price-tag-detection" target="_blank">Shelf Price Detection at Edge</a></span><span>May 2026</span></div>
+          <p>Real-time edge CV system for retail shelves. Fine-tuned <span class="term-kw">YOLOv8n</span> for price tag detection and integrated <span class="term-func">EasyOCR</span> with geometric scoring algorithms for robust price value parsing.</p>
+        </div>
+        
+        <div class="sys-block">
+          <div class="sys-meta"><span><a href="https://sachai.chat/" target="_blank">SachAI</a></span><span>Jan 2026 - Mar 2026</span></div>
+          <p><span class="term-func">WhatsApp assistant</span> for <span class="term-var">misinformation control</span> using <span class="term-type">multilingual RAG</span>, <span class="term-str">SynthID checks</span>, and <span class="term-kw">multimodal verification workflows</span>.</p>
+        </div>
+        
+        <div class="sys-block">
+          <div class="sys-meta"><span><a href="https://pocket-ninja.netlify.app/" target="_blank">PocketNinja</a></span><span>Oct 2025 - Dec 2025</span></div>
+          <p>Crowdsourced <span class="term-func">grocery-price intelligence platform</span> using <span class="term-str">OCR</span>, <span class="term-type">vision LLMs</span>, and <span class="term-kw">entity resolution</span> for <span class="term-var">Japanese script variants</span>.</p>
+        </div>
+        
+        <div class="sys-block">
+          <div class="sys-meta"><span><a href="https://connectkgp.netlify.app/" target="_blank">ConnectKGP</a></span><span>Feb 2024 - May 2024</span></div>
+          <p><span class="term-func">Pseudonymous social platform</span> powered by <span class="term-str">WebSockets</span>, <span class="term-str">WebRTC</span>, and <span class="term-type">autonomous LLM moderation</span> for <span class="term-var">real-time communication</span>.</p>
+        </div>
+
+        <button id="toggle-legacy" class="btn">./show_all_projects.sh</button>
+
+        <div id="legacy-projects" class="hidden" style="margin-top: 1.5rem;">
+          <div class="sys-block">
+            <div class="sys-meta"><span><a href="https://play.google.com/store/apps/details?id=krishi.mitra.grampracharak" target="_blank">Gram Pracharak</a></span><span>SDE Internship</span></div>
+            <p><span class="term-str">Flask-based backend</span> enhancements and <span class="term-func">scalable rural-user platform</span> delivery at Krishi Network.</p>
+          </div>
+          <div class="sys-block">
+            <div class="sys-meta"><span><a href="https://tfs-frontend.netlify.app/" target="_blank">Movie Ticket Booking System</a></span><span>Self Project</span></div>
+            <p><span class="term-func">Full-stack ticketing workflow</span> with <span class="term-var">seat booking flow</span> and user-facing <span class="term-type">frontend deployment</span>.</p>
+          </div>
+          <div class="sys-block">
+            <div class="sys-meta"><span><a href="https://mern-memories-webapp.herokuapp.com/" target="_blank">Memories Webapp</a></span><span>Self Project</span></div>
+            <p><span class="term-func">Social sharing application</span> built with the <span class="term-str">MERN stack</span> for <span class="term-kw">image-first post publishing</span>.</p>
+          </div>
+          <div class="sys-block">
+            <div class="sys-meta"><span><a href="https://github.com/wweverma1/TFPS_Equipment_Manager" target="_blank">Equipment Inventory Manager</a></span><span>Internship</span></div>
+            <p><span class="term-func">QR-driven asset inventory management</span> for streamlined <span class="term-type">equipment tracking and operations</span>.</p>
+          </div>
+          <div class="sys-block">
+            <div class="sys-meta"><span><a href="https://github.com/wweverma1/shrink-url" target="_blank">URL Shrink</a></span><span>Self Project</span></div>
+            <p>Compact <span class="term-func">URL shortening service</span> with <span class="term-kw">persistence</span> and <span class="term-var">quick redirect support</span>.</p>
+          </div>
+          <div class="sys-block">
+            <div class="sys-meta"><span><a href="https://react-mentor.netlify.app/" target="_blank">Mentor App</a></span><span>Self Project</span></div>
+            <p><span class="term-str">React-based</span> <span class="term-func">mentoring experience prototype</span> with a clean <span class="term-type">interaction-focused layout</span>.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="prompt">contact --connect<span class="blink">_</span></div>
+      <div class="sys-block" style="margin-top: 1rem;">
+        <p style="margin-bottom: 1rem;">Open to AI engineering, applied ML, and full-stack software opportunities.</p>
+        <div class="key-val"><div class="key">Email:</div><div class="val"><a href="mailto:wweverma1@gmail.com">wweverma1@gmail.com</a></div></div>
+        <div class="key-val"><div class="key">Phone:</div><div class="val"><a href="tel:+817084425369">+81-07084425369</a></div></div>
+        <div class="key-val"><div class="key">GitHub:</div><div class="val"><a href="https://github.com/wweverma1" target="_blank">github.com/wweverma1</a></div></div>
+        <div class="key-val"><div class="key">LinkedIn:</div><div class="val"><a href="https://www.linkedin.com/in/wweverma1/" target="_blank">linkedin.com/in/wweverma1</a></div></div>
+      </div>
+    </section>
+    
+    <footer style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); font-size: 0.85rem; color: var(--muted); text-align: center;">
+      <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved. Aditya Verma.</p>
+    </footer>
+
+  </div>
+
+  <script>
+    // Theme toggle functionality
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('portfolio-theme', newTheme);
+    });
+
+    // Legacy projects toggle
+    const toggleLegacyBtn = document.getElementById('toggle-legacy');
+    const legacyProjects = document.getElementById('legacy-projects');
+    toggleLegacyBtn.addEventListener('click', () => {
+      legacyProjects.classList.toggle('hidden');
+      if (legacyProjects.classList.contains('hidden')) {
+        toggleLegacyBtn.textContent = './show_all_projects.sh';
+      } else {
+        toggleLegacyBtn.textContent = './hide_all_projects.sh';
+      }
+    });
+
+    // Smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
